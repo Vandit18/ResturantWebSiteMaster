@@ -1,0 +1,29 @@
+﻿@model ResturantWebApp.Models.Dish
+@{
+    ViewBag.Title = "Menu Detail Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<div class="row">
+    <div class="col-md-offset-2 col-md-8" style="text-align:center">
+        <h3>@Model.DishType</h3>
+       <div class="detailDisplayDiv">
+               <table>
+                   <tr>
+                       <td>
+                           <img src="~/Assest/img/DishImages/@Model.DishLargeImage">
+                       </td>
+                       <td class="dishTable">
+                           
+                           <b>@Model.DishName</b>&nbsp;&nbsp;$@Model.Price
+                           <br />
+                           @Html.DisplayFor(modelItem => Model.DishDesc)
+                       </td>
+                   </tr>
+
+               </table>
+       </div>
+        <a href="@Url.Action("Menu","Dishes")" class="btn btn-info"><i class="fa fa-plus fa-lg"></i> Back To Menu</a>
+       
+    </div>
+</div>

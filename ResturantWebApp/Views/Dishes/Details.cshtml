@@ -1,0 +1,75 @@
+﻿@model ResturantWebApp.Models.Dish
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dish</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DishName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DishType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DishThumbImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishThumbImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DishLargeImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishLargeImage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DishShortDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishShortDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DishDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DishID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
